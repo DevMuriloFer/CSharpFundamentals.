@@ -1,38 +1,45 @@
-﻿// coeficients
-Double a, b, c;
-Double delta;
-Double root1, root2;
+﻿// coefficients
+double a, b, c;
+double delta;
+double root1, root2;
 
 Console.WriteLine("BHASKARA CALCULATOR \n");
-Console.Write("type coeficient a:");
-a = Double.Parse(Console.ReadLine());
+Console.Write("Enter coefficient a:");
+a = double.Parse(Console.ReadLine());
 
-Console.WriteLine("BHASKARA CALCULATOR \n");
-Console.Write("type coeficient b:");
-b = Double.Parse(Console.ReadLine());
+Console.Write("Enter coefficient b:");
+b = double.Parse(Console.ReadLine());
 
-Console.WriteLine("BHASKARA CALCULATOR \n");
-Console.Write("type coeficient c:");
-c = Double.Parse(Console.ReadLine());
+Console.Write("Enter coefficient c:");
+c = double.Parse(Console.ReadLine());
 
 delta = Math.Pow(b, 2) - (4 * a * c);
 
+// if delta < 0 there are no real roots
 if (delta < 0)
 {
-    Console.WriteLine("delta is lower than 0. There are no roots");
+    Console.WriteLine("delta is negative. There are no real roots");
 }
 else
 {
-    root1 = (-b + Math.Sqrt(delta)) / (2 * a);
-    root2 = (-b - Math.Sqrt(delta)) / (2 * a);
-
-    if (root1 == root2)
+// check to prevent division by zero
+    if (a == 0)
     {
-        Console.WriteLine($"this function only have one root equal to {root1}");
+        Console.WriteLine("a is equal to 0, this is not a quadratic function");
     }
     else
     {
-        Console.WriteLine($"root 1 equal to: {root1}");
-        Console.WriteLine($"root 2 equal to: {root2}");
+        root1 = (-b + Math.Sqrt(delta)) / (2 * a);
+        root2 = (-b - Math.Sqrt(delta)) / (2 * a);
+
+        if (root1 == root2)
+        {
+            Console.WriteLine($"X1 = X2 = {root1}");
+        }
+        else
+        {
+            Console.WriteLine($"X1 = {root1}");
+            Console.WriteLine($"X2 = {root2}");
+        }
     }
 }
