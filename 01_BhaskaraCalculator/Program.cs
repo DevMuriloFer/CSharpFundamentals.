@@ -1,5 +1,5 @@
 ﻿// coefficients
-double a, b, c;
+double a = 0, b, c;
 double delta;
 double root1, root2;
 
@@ -43,3 +43,4 @@ else
         }
     }
 }
+Console.WriteLine(a)
