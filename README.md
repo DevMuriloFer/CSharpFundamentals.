@@ -15,7 +15,7 @@ As a first-year Engineering student at **Fundação Salvador Arena**, I am focus
 
 ## Tech Stack
 * **Language:** C#
-* **Environment:** .NET SDK / Visual Studio 2022
+* **Environment:** .NET 10 SDK / Visual Studio 2026
 * **Focus:** Clean code and algorithmic efficiency.
 
 ## Repository Structure
